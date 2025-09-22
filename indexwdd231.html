@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Home Page de WDD231</title>
+  <meta name="description" content="Página principal de mi curso WDD231. Contiene navegación, cursos y contacto.">
+  <meta name="author" content="Tu Nombre">
+  
+  <!-- Normalize -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <!-- JavaScript -->
+  <script src="scripts/date.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.svg" alt="Logo del sitio" width="1" height="1">
+    <span>Tu Nombre</span>
+    <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About the Course</h2>
+      <p>Contenido sobre el curso WDD231.</p>
+    </section>
+
+    <section>
+      <h2>Certificate Courses</h2>
+      <div id="course-container">
+        <!-- Cursos se mostrarán dinámicamente con JS -->
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Tu información de contacto.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+      <a href="https://github.com/tuusuario" target="_blank">
+        <img src="images/github.svg" alt="GitHub logo">
+      </a>
+      <a href="https://www.linkedin.com/in/tuusuario" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn logo">
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> Tu Nombre, Tu País</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Navigation toggle
+    const navButton = document.querySelector('#nav-button');
+    const navBar = document.querySelector('#nav-bar');
+
+    navButton.addEventListener('click', () => {
+      navButton.classList.toggle('show');
+      navBar.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
