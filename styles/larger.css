@@ -1,0 +1,42 @@
+/* Medium and large screens */
+@media (min-width: 768px) {
+  .navigation {
+    display: block !important;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation li {
+    border: none;
+  }
+
+  .navigation li a {
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* About Me + Student Photo en dos columnas */
+  .about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Cursos en línea */
+  .courses {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .courses li {
+    flex: 1;
+  }
+}

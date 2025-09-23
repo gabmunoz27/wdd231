@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Home Page de WDD231</title>
-  <meta name="description" content="Página principal de mi curso WDD231. Contiene navegación, cursos y contacto.">
+  <meta name="description" content="HOME PAGE COURSE WDD231. Contain information about the course and its content.">
   <meta name="author" content="Tu Nombre">
-  
-  <!-- Normalize -->
+
+
   <link rel="stylesheet" href="styles/normalize.css">
   <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <!-- JavaScript -->
   <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <img src="images/logo.svg" alt="Logo del sitio" width="1" height="1">
-    <span>Tu Nombre</span>
+    <img src="images/logo.svg" alt="Logo del sitio" width="40" height="40">
+    <span>Gabriel Munoz</span>
     <button id="nav-button" class="hamburger" aria-label="navigation"></button>
   </header>
 
@@ -27,8 +28,8 @@
   <nav id="nav-bar" class="navigation">
     <ul>
       <li class="current"><a href="#">Home</a></li>
-      <li><a href="#">Chamber</a></li>
-      <li><a href="#">Final</a></li>
+      <li><a href="#">Chamber Project</a></li>
+      <li><a href="#">Final Project</a></li>
     </ul>
   </nav>
 
@@ -36,31 +37,42 @@
   <main>
     <h1>Home</h1>
 
-    <section>
-      <h2>About the Course</h2>
-      <p>Contenido sobre el curso WDD231.</p>
-    </section>
-
-    <section>
-      <h2>Certificate Courses</h2>
-      <div id="course-container">
-        <!-- Cursos se mostrarán dinámicamente con JS -->
+    <!-- About Me + Student Photo -->
+    <section class="about-container">
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>
+          My name is Gabriel, I have always dreamed of being a singer. I enjoy playing the guitar and piano. I currently work as a motion graphic designer at a marketing agency where I combine storytelling with visuals.
+        </p>
+      </div>
+      <div class="student-photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.jpg" alt="Student Photo">
       </div>
     </section>
 
+    <!-- Certificate Courses -->
     <section>
-      <h2>Contact</h2>
-      <p>Tu información de contacto.</p>
+      <h2>Web Certificate Courses</h2>
+      <div class="filters">
+        <button data-filter="All">All</button>
+        <button data-filter="CSE">CSE</button>
+        <button data-filter="WDD">WDD</button>
+      </div>
+      <ul id="course-list" class="courses">
+        <!-- Cursos dinámicos aquí -->
+      </ul>
+      <p id="total-credits"></p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="social-media">
-      <a href="https://github.com/tuusuario" target="_blank">
+      <a href="https://github.com/gabmunoz27" target="_blank">
         <img src="images/github.svg" alt="GitHub logo">
       </a>
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank">
+      <a href="https://www.linkedin.com/in/gabriel-mu%C3%B1oz/" target="_blank">
         <img src="images/linkedin.svg" alt="LinkedIn logo">
       </a>
     </div>
