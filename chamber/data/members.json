@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Tech Solutions",
+    "address": "123 Main St, Ciudad",
+    "phone": "+123 456 7890",
+    "website": "https://techsolutions.com",
+    "image": "images/tech.png",
+    "membership": 3
+  },
+  {
+    "name": "Green Market",
+    "address": "456 Central Ave, Ciudad",
+    "phone": "+123 555 1111",
+    "website": "https://greenmarket.com",
+    "image": "images/market.png",
+    "membership": 2
+  },
+  {
+    "name": "AutoFix Garage",
+    "address": "789 Industrial Rd, Ciudad",
+    "phone": "+123 987 6543",
+    "website": "https://autofix.com",
+    "image": "images/autofix.png",
+    "membership": 1
+  }
+
+
+]

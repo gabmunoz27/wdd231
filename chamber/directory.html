@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Directory - Connecting businesses in [Tu Ciudad].">
+  <meta name="author" content="Tu Nombre">
+  <title>Chamber Directory | [Tu Ciudad]</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook Meta -->
+  <meta property="og:title" content="Chamber of Commerce - [Guayaquil - Ecuador]">
+  <meta property="og:description" content="Discover local businesses in our Chamber Directory.">
+  <meta property="og:image" content="images/social-share.png">
+  <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/directory.html">
+
+  <!-- Normalize -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce - [Tu Ciudad]</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view-toggle">
+      <button id="gridView">Grid</button>
+      <button id="listView">List</button>
+    </section>
+    <section id="directory" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>📍 Contact us: info@chamber.com | +123 456 7890</p>
+    <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    <p>Developed by Tu Nombre | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
