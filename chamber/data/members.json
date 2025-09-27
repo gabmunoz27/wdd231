@@ -1,28 +1,58 @@
 [
   {
-    "name": "Tech Solutions",
-    "address": "123 Main St, Ciudad",
-    "phone": "+123 456 7890",
-    "website": "https://techsolutions.com",
-    "image": "images/tech.png",
+    "name": "La Universal",
+    "address": "Av. Francisco de Orellana 2100, Guayaquil",
+    "phone": "+593 4 250 1234",
+    "website": "https://launiversal.ec",
+    "image": "images/launiversal.png",
     "membership": 3
   },
   {
-    "name": "Green Market",
-    "address": "456 Central Ave, Ciudad",
-    "phone": "+123 555 1111",
-    "website": "https://greenmarket.com",
-    "image": "images/market.png",
+    "name": "Almacenes DePrati",
+    "address": "Av. 9 de Octubre 1234, Guayaquil",
+    "phone": "+593 4 251 5678",
+    "website": "https://deprati.com.ec",
+    "image": "images/deprati.png",
+    "membership": 3
+  },
+  {
+    "name": "Corporación El Rosado",
+    "address": "Av. Carlos Julio Arosemena 800, Guayaquil",
+    "phone": "+593 4 252 9012",
+    "website": "https://elrosado.com.ec",
+    "image": "images/elrosado.png",
     "membership": 2
   },
   {
-    "name": "AutoFix Garage",
-    "address": "789 Industrial Rd, Ciudad",
-    "phone": "+123 987 6543",
-    "website": "https://autofix.com",
-    "image": "images/autofix.png",
+    "name": "Banco de Guayaquil",
+    "address": "Malecón Simón Bolívar 100, Guayaquil",
+    "phone": "+593 4 253 3456",
+    "website": "https://bancodeguayaquil.com",
+    "image": "images/bancodeguayaquil.png",
+    "membership": 3
+  },
+  {
+    "name": "Tía",
+    "address": "Av. 25 de Julio 450, Guayaquil",
+    "phone": "+593 4 254 7890",
+    "website": "https://tia.com.ec",
+    "image": "images/tia.png",
+    "membership": 2
+  },
+  {
+    "name": "Supermaxi",
+    "address": "Av. Francisco de Orellana 3100, Guayaquil",
+    "phone": "+593 4 255 2345",
+    "website": "https://supermaxi.com.ec",
+    "image": "images/supermaxi.png",
+    "membership": 3
+  },
+  {
+    "name": "Movistar Ecuador",
+    "address": "Av. José Mascote 600, Guayaquil",
+    "phone": "+593 4 256 6789",
+    "website": "https://movistar.com.ec",
+    "image": "images/movistar.png",
     "membership": 1
   }
-
-
 ]
