@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Quito Chamber of Commerce</title>
-    <!-- Incluya sus meta tags de redes sociales (FaceBook Open Graph) y favicon -->
-    
-    <!-- CSS: Deben vincularse antes de cualquier otro CSS [8] -->
-    <link rel="stylesheet" href="styles/normalize.css"> 
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cámara de Comercio de Guayaquil</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
-    <h1>Chamber of Commerce - Guayaquil</h1>
+
+  <header>
+    <div class="logo">
+      <img src="images/flag.png" alt="Cámara de Comercio de Guayaquil">
+      <h1>Cámara de Comercio de Guayaquil</h1>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+      <a href="index.html" class="active">Home</a>
+      <a href="directory.html">Directorio</a>
+      <a href="join.html">Unirse</a>
+      <a href="discover.html">Descubrir</a>
+      <button id="mode-toggle">🌙</button>
     </nav>
-    </header>
-    <main>
-        <!-- SECCIÓN 1: HERO IMAGE Y CALL TO ACTION (CTA) -->
-        <!-- La imagen debe ser Responsive y el CTA debe estar POSICIONADO ENCIMA [1, 10] -->
-        <section id="hero-section">
-            <picture>
-                <!-- Use <picture> o CSS Media Queries para optimizar la carga y cumplir con el límite de 500kB [2] -->
-                <source srcset="images/hero.jpg" media="(min-width: 900px)">
-                <img id="hero-image" src="images/hero-small.webp" alt="Welcome to [Quito]" loading="lazy">
-            </picture>
-            <a href="join.html" id="cta-link">Únete a la Cámara Ahora</a>
-        </section>
+  </header>
 
-        <!-- SECCIÓN 2: EVENTOS ACTUALES -->
-        <!-- Contenido de marcador de posición (placeholder) es aceptable [2] -->
-        <section id="events-section">
-            <h2>Próximo Evento</h2>
-            <p><strong>Cena de Premios Anuales:</strong> 25 de Octubre, 6:00 PM.</p>
-            <p>Detalles e inscripción aquí.</p>
-        </section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/Hero.jpg" alt="Vista panorámica de Guayaquil">
+      <a href="join.html" class="cta-btn">Únete Hoy</a>
+    </section>
 
-        <!-- SECCIÓN 3: CLIMA (WEATHER API) -->
-        <!-- Debe mostrar temperatura actual, descripción y pronóstico de 3 días [2] -->
-        <section id="weather-section">
-            <h2>Clima Local</h2>
-            <div id="current-weather">
-                <p>Temperatura: <span id="current-temp">--</span></p>
-                <figure>
-                    <img id="weather-icon" src="" alt="Icono del Clima">
-                    <figcaption id="weather-desc">Cargando...</figcaption>
-                </figure>
-            </div>
-            <div id="forecast-container">
-                <h3>Pronóstico de 3 Días</h3>
-                <!-- Las tarjetas de pronóstico se insertarán aquí por JavaScript -->
-            </div>
-        </section>
-        
-        <!-- SECCIÓN 4: COMPANY SPOTLIGHTS -->
-        <!-- Muestra 2 o 3 miembros Gold/Silver seleccionados aleatoriamente [3] -->
-        <section id="spotlight-section">
-            <h2>Destacados del Mes</h2>
-            <div id="spotlights-container">
-                <!-- Las tarjetas de miembros se insertarán aquí por JavaScript -->
-            </div>
-        </section>
-        
-    </main>
-    
-    <footer>
-        <!-- El pie de página debe ser consistente [6] -->
-        <p>&copy; <span id="year"></span> [Su Nombre] | WDD 231</p>
-        <p>Última Modificación: <span id="lastModified"></span></p>
-    </footer>
+    <!-- Home Sections -->
+    <h2>Inicio</h2>
+    <section class="home-grid">
 
-    <!-- Vincular el script usando el atributo type="module" [11] -->
-    <script src="scripts/main.mjs" type="module"></script>
+      <div class="events">
+        <h3>Eventos</h3>
+        <ul>
+          <li>📅 Feria Empresarial - 12 de Octubre</li>
+          <li>🎤 Conferencia Económica - 20 de Octubre</li>
+          <li>🤝 Networking Empresarial - 5 de Noviembre</li>
+        </ul>
+      </div>
+
+      <div class="weather">
+        <h3>Clima Actual</h3>
+        <p id="temperature"></p>
+        <p id="description"></p>
+        <p id="humidity"></p>
+      </div>
+
+      <div class="forecast">
+        <h3>Pronóstico</h3>
+        <ul id="forecast-list"></ul>
+      </div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section class="spotlights">
+      <div class="spotlight" id="spotlight1"></div>
+      <div class="spotlight" id="spotlight2"></div>
+      <div class="spotlight" id="spotlight3"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <h4>Cámara de Comercio de Guayaquil</h4>
+      <p>Av. Francisco de Orellana 236, Guayaquil, Ecuador</p>
+      <p>Email: info@ccg.org.ec | Tel: (04) 259-6100</p>
+    </div>
+    <div class="social">
+      <a href="http://www.youtube.com"><img src="images/youtube_logo.svg" alt="YouTube"></a>
+      <a href="https://x.com/home"><img src="images/twitter_logo.svg" alt="Twitter"></a>
+      <a href="https://www.linkedin.com/feed/"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
+    </div>
+    <p>WDD231 Class Project | Gabriel Muñoz<br>
+       © 2025 Cámara de Comercio de Guayaquil<br>
+       Última modificación: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>

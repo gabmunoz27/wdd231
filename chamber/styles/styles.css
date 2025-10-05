@@ -1,52 +1,192 @@
-body {
-  font-family: Arial, sans-serif;
+/* ===============================
+   🎨 ESTILOS GENERALES
+================================*/
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-header, footer {
-  background: #003366;
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===============================
+   🧭 HEADER Y NAVEGACIÓN
+================================*/
+header {
+  background-color: #003366;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-nav ul {
+header .logo {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header .logo img {
+  width: 50px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
-  list-style: none;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.view-toggle {
-  text-align: center;
-  margin: 1rem;
+nav a:hover,
+nav a.active {
+  color: #f1c40f;
 }
 
-#directory.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+/* ===============================
+   🖼️ HERO SECTION
+================================*/
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-#directory.list {
+.hero img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
   display: block;
-  padding: 1rem;
+  filter: brightness(0.9);
 }
 
-.card {
-  border: 1px solid #ccc;
-  padding: 1rem;
+/* Botón CTA (Call To Action) */
+.cta-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background: #f1c40f;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ffdc4a;
+}
+
+/* ===============================
+   🧩 SECCIONES DEL HOME
+================================*/
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.card img {
-  width: 100px;
-  height: auto;
+.home-grid h3 {
+  background-color: #003366;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px 6px 0 0;
+}
+
+.home-grid div {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* ===============================
+   📞 FOOTER
+================================*/
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+
+footer .social a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+================================*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  header .logo img {
+    width: 40px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .cta-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero img {
+    height: 40vh;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 }
