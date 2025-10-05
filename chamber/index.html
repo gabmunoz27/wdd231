@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Quito Chamber of Commerce</title>
+    <!-- Incluya sus meta tags de redes sociales (FaceBook Open Graph) y favicon -->
+    
+    <!-- CSS: Deben vincularse antes de cualquier otro CSS [8] -->
+    <link rel="stylesheet" href="styles/normalize.css"> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css"> 
+</head>
+<body>
+    <header>
+    <h1>Chamber of Commerce - Guayaquil</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+        <!-- SECCIÓN 1: HERO IMAGE Y CALL TO ACTION (CTA) -->
+        <!-- La imagen debe ser Responsive y el CTA debe estar POSICIONADO ENCIMA [1, 10] -->
+        <section id="hero-section">
+            <picture>
+                <!-- Use <picture> o CSS Media Queries para optimizar la carga y cumplir con el límite de 500kB [2] -->
+                <source srcset="images/hero.jpg" media="(min-width: 900px)">
+                <img id="hero-image" src="images/hero-small.webp" alt="Welcome to [Quito]" loading="lazy">
+            </picture>
+            <a href="join.html" id="cta-link">Únete a la Cámara Ahora</a>
+        </section>
+
+        <!-- SECCIÓN 2: EVENTOS ACTUALES -->
+        <!-- Contenido de marcador de posición (placeholder) es aceptable [2] -->
+        <section id="events-section">
+            <h2>Próximo Evento</h2>
+            <p><strong>Cena de Premios Anuales:</strong> 25 de Octubre, 6:00 PM.</p>
+            <p>Detalles e inscripción aquí.</p>
+        </section>
+
+        <!-- SECCIÓN 3: CLIMA (WEATHER API) -->
+        <!-- Debe mostrar temperatura actual, descripción y pronóstico de 3 días [2] -->
+        <section id="weather-section">
+            <h2>Clima Local</h2>
+            <div id="current-weather">
+                <p>Temperatura: <span id="current-temp">--</span></p>
+                <figure>
+                    <img id="weather-icon" src="" alt="Icono del Clima">
+                    <figcaption id="weather-desc">Cargando...</figcaption>
+                </figure>
+            </div>
+            <div id="forecast-container">
+                <h3>Pronóstico de 3 Días</h3>
+                <!-- Las tarjetas de pronóstico se insertarán aquí por JavaScript -->
+            </div>
+        </section>
+        
+        <!-- SECCIÓN 4: COMPANY SPOTLIGHTS -->
+        <!-- Muestra 2 o 3 miembros Gold/Silver seleccionados aleatoriamente [3] -->
+        <section id="spotlight-section">
+            <h2>Destacados del Mes</h2>
+            <div id="spotlights-container">
+                <!-- Las tarjetas de miembros se insertarán aquí por JavaScript -->
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <!-- El pie de página debe ser consistente [6] -->
+        <p>&copy; <span id="year"></span> [Su Nombre] | WDD 231</p>
+        <p>Última Modificación: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- Vincular el script usando el atributo type="module" [11] -->
+    <script src="scripts/main.mjs" type="module"></script>
+</body>
+</html>
