@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Directorio de miembros de la Cámara de Comercio de Guayaquil: conoce las empresas locales de nuestra comunidad.">
+  <meta name="author" content="Gabriel Muñoz Beltran">
+  <title>Cámara de Comercio de Guayaquil | Directorio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook / Open Graph Meta -->
+  <meta property="og:title" content="Directorio | Cámara de Comercio de Guayaquil">
+  <meta property="og:description" content="Descubre las empresas locales miembros de nuestra Cámara de Comercio.">
+  <meta property="og:image" content="https://tuusuario.github.io/wdd231/chamber/images/social-share.png">
+  <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/directory.html">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: normalize primero, luego small y larger -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Scripts: solo los que necesita esta página -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/flag.png" alt="Logo de la Cámara de Comercio de Guayaquil">
+      <span>Cámara de Comercio de Guayaquil</span>
+    </div>
+    <button id="menu-btn" aria-label="Abrir menú de navegación"></button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="directory.html" class="active">Directorio</a></li>
+        <li><a href="join.html">Únete</a></li>
+        <li><a href="discover.html">Descubre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Directorio de Miembros</h1>
+
+    <section class="view-toggle">
+      <button id="gridView" aria-pressed="true">Cuadrícula</button>
+      <button id="listView" aria-pressed="false">Lista</button>
+    </section>
+
+    <section id="directory" class="grid">
+      <!-- Las tarjetas se generan dinámicamente con directory.js -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <h4>Cámara de Comercio de Guayaquil</h4>
+      <p>Av. Francisco de Orellana 236, Guayaquil, Ecuador</p>
+      <p>info@ccg.org.ec | (04) 259-6100</p>
+    </div>
+    <div class="social">
+      <a href="https://www.youtube.com"><img src="images/youtube_logo.svg" alt="YouTube"></a>
+      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X (Twitter)"></a>
+      <a href="https://www.linkedin.com"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
+    </div>
+    <p>
+      Gabriel Muñoz Beltran | WDD 231<br>
+      © <span id="currentyear"></span> Cámara de Comercio de Guayaquil<br>
+      Última modificación: <span id="lastModified"></span>
+    </p>
+  </footer>
+</body>
+</html>
