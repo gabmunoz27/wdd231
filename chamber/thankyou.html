@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Directorio de miembros de la Cámara de Comercio de Guayaquil: conoce las empresas locales de nuestra comunidad.">
+  <meta name="description" content="Gracias por solicitar tu membresía en la Cámara de Comercio de Guayaquil. Hemos recibido tu información.">
   <meta name="author" content="Gabriel Muñoz Beltran">
-  <title>Cámara de Comercio de Guayaquil | Directorio</title>
+  <title>Cámara de Comercio de Guayaquil | Gracias</title>
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
 
   <!-- Facebook / Open Graph Meta -->
-  <meta property="og:title" content="Directorio | Cámara de Comercio de Guayaquil">
-  <meta property="og:description" content="Descubre las empresas locales miembros de nuestra Cámara de Comercio.">
+  <meta property="og:title" content="Gracias | Cámara de Comercio de Guayaquil">
+  <meta property="og:description" content="Hemos recibido tu solicitud de membresía.">
   <meta property="og:image" content="https://gabmunoz27.github.io/wdd231/chamber/images/social-share.png">
-  <meta property="og:url" content="https://gabmunoz27.github.io/wdd231/chamber/directory.html">
+  <meta property="og:url" content="https://gabmunoz27.github.io/wdd231/chamber/thankyou.html">
 
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
   <!-- Scripts: solo los que necesita esta página -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/dates.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
   <header>
@@ -41,23 +41,37 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="directory.html" class="active">Directorio</a></li>
-        <li><a href="join.html">Únete</a></li>
+        <li><a href="directory.html">Directorio</a></li>
+        <li><a href="join.html" class="active">Únete</a></li>
         <li><a href="discover.html">Descubre</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Directorio de Miembros</h1>
+    <h1>¡Gracias por tu solicitud!</h1>
 
-    <section class="view-toggle">
-      <button id="gridView" aria-pressed="true">Cuadrícula</button>
-      <button id="listView" aria-pressed="false">Lista</button>
-    </section>
+    <section class="thankyou-card">
+      <p>Hemos recibido tu solicitud de membresía. Nuestro equipo la revisará y te contactará pronto. Este es el resumen de tu información:</p>
 
-    <section id="directory" class="grid">
-      <!-- Las tarjetas se generan dinámicamente con directory.js -->
+      <dl class="summary">
+        <dt>Nombre:</dt>
+        <dd id="summary-name"></dd>
+
+        <dt>Correo electrónico:</dt>
+        <dd id="summary-email"></dd>
+
+        <dt>Teléfono móvil:</dt>
+        <dd id="summary-phone"></dd>
+
+        <dt>Negocio u organización:</dt>
+        <dd id="summary-org"></dd>
+
+        <dt>Fecha de solicitud:</dt>
+        <dd id="summary-timestamp"></dd>
+      </dl>
+
+      <a href="/wdd231/chamber/index.html" class="cta-btn thankyou-btn">Volver al Inicio</a>
     </section>
   </main>
 

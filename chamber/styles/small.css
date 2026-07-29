@@ -364,3 +364,207 @@ footer h4 {
 .social a:hover img {
   transform: scale(1.15);
 }
+
+/* ============ FORMULARIO JOIN ============ */
+.join-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.join-form fieldset {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.join-form legend {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0 0.5rem;
+}
+
+.join-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 3px solid var(--accent);
+  border-color: var(--primary);
+}
+
+.join-form input:required:valid {
+  border-left: 5px solid #2e7d32;
+}
+
+.join-form input:required:invalid:not(:placeholder-shown):not(:focus) {
+  border-left: 5px solid #c62828;
+}
+
+.submit-btn {
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #00509e;
+}
+
+/* ============ TARJETAS DE MEMBRESÍA ============ */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: start;
+}
+
+.membership-cards h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.membership-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  /* Animación de entrada al cargar la página */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: card-enter 0.6s ease forwards;
+}
+
+.membership-card:nth-child(2) { animation-delay: 0.1s; }
+.membership-card:nth-child(3) { animation-delay: 0.25s; }
+.membership-card:nth-child(4) { animation-delay: 0.4s; }
+.membership-card:nth-child(5) { animation-delay: 0.55s; }
+
+@keyframes card-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.membership-card h3 {
+  margin: 0 0 0.25rem;
+  color: var(--primary);
+}
+
+.membership-card p {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.membership-card a {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.np-card { border-top: 5px solid #7f8c8d; }
+.bronze-card { border-top: 5px solid #cd7f32; }
+.silver-card { border-top: 5px solid #9aa5b1; }
+.gold-card { border-top: 5px solid var(--accent); }
+
+/* ============ MODALES ============ */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+  background: rgba(0, 20, 40, 0.6);
+}
+
+dialog h3 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+dialog ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+dialog li {
+  margin-bottom: 0.35rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ============ PÁGINA DE GRACIAS ============ */
+.thankyou-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  margin: 1.25rem 0;
+}
+
+.summary dt {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.summary dd {
+  margin: 0;
+}
+
+.thankyou-btn {
+  position: static;
+  display: inline-block;
+  margin-top: 0.5rem;
+}

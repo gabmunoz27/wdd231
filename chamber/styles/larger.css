@@ -84,3 +84,12 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ============ JOIN — PANTALLAS GRANDES ============ */
+@media (min-width: 768px) {
+  /* Formulario a la izquierda, tarjetas a la derecha */
+  .join-layout {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+}
