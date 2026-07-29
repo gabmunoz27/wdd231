@@ -1,4 +1,4 @@
-// spotlights.js — miembros destacados aleatorios gold/silver (solo index.html)
+// spotlights.js — random gold/silver member spotlights (index.html only)
 
 const membershipNames = {
   1: "Member",
@@ -10,20 +10,20 @@ async function getSpotlights() {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) {
-      throw new Error(`Error HTTP: ${response.status}`);
+      throw new Error(`HTTP error: ${response.status}`);
     }
     const members = await response.json();
 
-    // Solo miembros silver (2) o gold (3)
+    // Keep only silver (2) and gold (3) members
     const eligible = members.filter((member) => member.membership >= 2);
 
-    // Mezclar aleatoriamente y tomar 3
+    // Shuffle randomly and take three
     const shuffled = eligible.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
     displaySpotlights(selected);
   } catch (error) {
-    console.error("Error al cargar los spotlights:", error);
+    console.error("Error loading spotlights:", error);
   }
 }
 
@@ -35,11 +35,11 @@ function displaySpotlights(members) {
     const card = document.createElement("section");
     card.classList.add("spotlight");
     card.innerHTML = `
-      <img src="${member.image}" alt="Logo de ${member.name}" loading="lazy" width="100" height="100">
+      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="100" height="100">
       <h3>${member.name}</h3>
       <p>${member.address}</p>
-      <p>📞 ${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener">Visitar sitio web</a><br>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank" rel="noopener">Visit website</a><br>
       <span class="membership">${membershipNames[member.membership]} Member</span>
     `;
     container.appendChild(card);

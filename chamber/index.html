@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Página de inicio de la Cámara de Comercio de Guayaquil: eventos, clima local y empresas destacadas de nuestra comunidad.">
-  <meta name="author" content="Gabriel Muñoz Beltran">
-  <title>Cámara de Comercio de Guayaquil | Inicio</title>
+  <meta name="description" content="Home page of the Guayaquil Chamber of Commerce: current events, local weather and spotlighted member businesses.">
+  <meta name="author" content="Gabriel Munoz Beltran">
+  <title>Home | Guayaquil Chamber of Commerce</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
 
-  <!-- Facebook / Open Graph Meta -->
-  <meta property="og:title" content="Cámara de Comercio de Guayaquil">
-  <meta property="og:description" content="Conectamos y fortalecemos a las empresas de Guayaquil, Ecuador.">
-  <meta property="og:image" content="https://tuusuario.github.io/wdd231/chamber/images/social-share.png">
-  <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/index.html">
+  <meta property="og:title" content="Home | Guayaquil Chamber of Commerce">
+  <meta property="og:description" content="Connecting and strengthening businesses in Guayaquil, Ecuador.">
+  <meta property="og:image" content="https://gabmunoz27.github.io/wdd231/chamber/images/social-share.png">
+  <meta property="og:url" content="https://gabmunoz27.github.io/wdd231/chamber/index.html">
 
-  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS: normalize primero, luego small y larger -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Scripts: solo los que necesita esta página -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/dates.js" defer></script>
   <script src="scripts/weather.js" defer></script>
@@ -35,44 +30,42 @@
 <body>
   <header>
     <div class="logo">
-      <img src="images/flag.png" alt="Logo de la Cámara de Comercio de Guayaquil">
-      <span>Cámara de Comercio de Guayaquil</span>
+      <img src="images/flag.png" alt="Guayaquil Chamber of Commerce logo">
+      <span>Guayaquil Chamber of Commerce</span>
     </div>
-    <button id="menu-btn" aria-label="Abrir menú de navegación"></button>
+    <button id="menu-btn" aria-label="Open navigation menu"></button>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="directory.html">Directorio</a></li>
-        <li><a href="join.html">Únete</a></li>
-        <li><a href="discover.html">Descubre</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Bienvenido a la Cámara de Comercio de Guayaquil</h1>
+    <h1>Welcome to the Guayaquil Chamber of Commerce</h1>
 
-    <!-- Hero con llamada a la acción -->
     <section class="hero">
-      <img src="images/hero.jpg" alt="Vista panorámica del Malecón de Guayaquil">
-      <a href="join.html" class="cta-btn">Únete Hoy</a>
+      <img src="images/hero.webp" alt="Panoramic view of the Guayaquil waterfront at sunset">
+      <a href="join.html" class="cta-btn">Join Today</a>
     </section>
 
-    <!-- Eventos, clima y pronóstico -->
     <section class="home-grid">
       <section class="card events">
-        <h3>Eventos Actuales</h3>
+        <h3>Current Events</h3>
         <div>
           <ul>
-            <li>📅 Feria Empresarial — 12 de octubre</li>
-            <li>🎤 Conferencia Económica — 20 de octubre</li>
-            <li>🤝 Networking Empresarial — 5 de noviembre</li>
+            <li>Business Expo &mdash; October 12</li>
+            <li>Economic Conference &mdash; October 20</li>
+            <li>Business Networking Night &mdash; November 5</li>
           </ul>
         </div>
       </section>
 
       <section class="card weather">
-        <h3>Clima Actual</h3>
+        <h3>Current Weather</h3>
         <div>
           <p class="weather-temp" id="temperature"></p>
           <p class="weather-desc" id="description"></p>
@@ -81,35 +74,34 @@
       </section>
 
       <section class="card forecast">
-        <h3>Pronóstico de 3 Días</h3>
+        <h3>Three Day Forecast</h3>
         <div>
           <ul id="forecast-list"></ul>
         </div>
       </section>
     </section>
 
-    <!-- Empresas destacadas (spotlights) -->
-    <h2>Empresas Destacadas</h2>
+    <h2>Member Spotlights</h2>
     <section class="spotlights">
-      <!-- Las tarjetas se generan dinámicamente con spotlights.js -->
+      <!-- Cards are generated dynamically by spotlights.js -->
     </section>
   </main>
 
   <footer>
     <div class="footer-info">
-      <h4>Cámara de Comercio de Guayaquil</h4>
+      <h4>Guayaquil Chamber of Commerce</h4>
       <p>Av. Francisco de Orellana 236, Guayaquil, Ecuador</p>
       <p>info@ccg.org.ec | (04) 259-6100</p>
     </div>
     <div class="social">
       <a href="https://www.youtube.com"><img src="images/youtube_logo.svg" alt="YouTube"></a>
-      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X (Twitter)"></a>
+      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X, formerly Twitter"></a>
       <a href="https://www.linkedin.com"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
     </div>
     <p>
-      Gabriel Muñoz Beltran | WDD 231<br>
-      © <span id="currentyear"></span> Cámara de Comercio de Guayaquil<br>
-      Última modificación: <span id="lastModified"></span>
+      Gabriel Munoz Beltran | WDD 231<br>
+      &copy; <span id="currentyear"></span> Guayaquil Chamber of Commerce<br>
+      Last Modified: <span id="lastModified"></span>
     </p>
   </footer>
 </body>

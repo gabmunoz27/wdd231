@@ -1,4 +1,4 @@
-// thankyou.js — muestra los datos enviados por el formulario (solo thankyou.html)
+// thankyou.js — display the submitted form data (thankyou.html only)
 
 const params = new URLSearchParams(window.location.search);
 
@@ -10,11 +10,11 @@ document.querySelector("#summary-email").textContent = params.get("email") ?? ""
 document.querySelector("#summary-phone").textContent = params.get("phone") ?? "";
 document.querySelector("#summary-org").textContent = params.get("organization") ?? "";
 
-// Formatear el timestamp del campo oculto a un formato legible
+// Format the hidden timestamp field into a readable date
 const rawTimestamp = params.get("timestamp");
 if (rawTimestamp) {
   const date = new Date(rawTimestamp);
-  document.querySelector("#summary-timestamp").textContent = date.toLocaleString("es-EC", {
+  document.querySelector("#summary-timestamp").textContent = date.toLocaleString("en-US", {
     dateStyle: "long",
     timeStyle: "short"
   });

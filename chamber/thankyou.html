@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gracias por solicitar tu membresía en la Cámara de Comercio de Guayaquil. Hemos recibido tu información.">
-  <meta name="author" content="Gabriel Muñoz Beltran">
-  <title>Cámara de Comercio de Guayaquil | Gracias</title>
+  <meta name="description" content="Thank you for applying for membership in the Guayaquil Chamber of Commerce. We have received your information.">
+  <meta name="author" content="Gabriel Munoz Beltran">
+  <title>Thank You | Guayaquil Chamber of Commerce</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
 
-  <!-- Facebook / Open Graph Meta -->
-  <meta property="og:title" content="Gracias | Cámara de Comercio de Guayaquil">
-  <meta property="og:description" content="Hemos recibido tu solicitud de membresía.">
+  <meta property="og:title" content="Thank You | Guayaquil Chamber of Commerce">
+  <meta property="og:description" content="We have received your membership application.">
   <meta property="og:image" content="https://gabmunoz27.github.io/wdd231/chamber/images/social-share.png">
   <meta property="og:url" content="https://gabmunoz27.github.io/wdd231/chamber/thankyou.html">
 
-  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS: normalize primero, luego small y larger -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Scripts: solo los que necesita esta página -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/dates.js" defer></script>
   <script src="scripts/thankyou.js" defer></script>
@@ -34,62 +29,62 @@
 <body>
   <header>
     <div class="logo">
-      <img src="images/flag.png" alt="Logo de la Cámara de Comercio de Guayaquil">
-      <span>Cámara de Comercio de Guayaquil</span>
+      <img src="images/flag.png" alt="Guayaquil Chamber of Commerce logo">
+      <span>Guayaquil Chamber of Commerce</span>
     </div>
-    <button id="menu-btn" aria-label="Abrir menú de navegación"></button>
+    <button id="menu-btn" aria-label="Open navigation menu"></button>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="directory.html">Directorio</a></li>
-        <li><a href="join.html" class="active">Únete</a></li>
-        <li><a href="discover.html">Descubre</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>¡Gracias por tu solicitud!</h1>
+    <h1>Thank You for Your Application</h1>
 
     <section class="thankyou-card">
-      <p>Hemos recibido tu solicitud de membresía. Nuestro equipo la revisará y te contactará pronto. Este es el resumen de tu información:</p>
+      <p>We have received your membership application. Our team will review it and contact you soon. Here is a summary of the information you submitted:</p>
 
       <dl class="summary">
-        <dt>Nombre:</dt>
+        <dt>Name:</dt>
         <dd id="summary-name"></dd>
 
-        <dt>Correo electrónico:</dt>
+        <dt>Email Address:</dt>
         <dd id="summary-email"></dd>
 
-        <dt>Teléfono móvil:</dt>
+        <dt>Mobile Phone:</dt>
         <dd id="summary-phone"></dd>
 
-        <dt>Negocio u organización:</dt>
+        <dt>Business or Organization:</dt>
         <dd id="summary-org"></dd>
 
-        <dt>Fecha de solicitud:</dt>
+        <dt>Date Submitted:</dt>
         <dd id="summary-timestamp"></dd>
       </dl>
 
-      <a href="/wdd231/chamber/index.html" class="cta-btn thankyou-btn">Volver al Inicio</a>
+      <a href="index.html" class="cta-btn thankyou-btn">Back to Home</a>
     </section>
   </main>
 
   <footer>
     <div class="footer-info">
-      <h4>Cámara de Comercio de Guayaquil</h4>
+      <h4>Guayaquil Chamber of Commerce</h4>
       <p>Av. Francisco de Orellana 236, Guayaquil, Ecuador</p>
       <p>info@ccg.org.ec | (04) 259-6100</p>
     </div>
     <div class="social">
       <a href="https://www.youtube.com"><img src="images/youtube_logo.svg" alt="YouTube"></a>
-      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X (Twitter)"></a>
+      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X, formerly Twitter"></a>
       <a href="https://www.linkedin.com"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
     </div>
     <p>
-      Gabriel Muñoz Beltran | WDD 231<br>
-      © <span id="currentyear"></span> Cámara de Comercio de Guayaquil<br>
-      Última modificación: <span id="lastModified"></span>
+      Gabriel Munoz Beltran | WDD 231<br>
+      &copy; <span id="currentyear"></span> Guayaquil Chamber of Commerce<br>
+      Last Modified: <span id="lastModified"></span>
     </p>
   </footer>
 </body>

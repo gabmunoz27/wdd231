@@ -1,4 +1,4 @@
-// navigation.js — menú hamburguesa responsivo (todas las páginas)
+// navigation.js — responsive hamburger menu (all pages)
 
 const menuBtn = document.querySelector("#menu-btn");
 const navList = document.querySelector("nav ul");

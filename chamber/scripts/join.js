@@ -1,28 +1,28 @@
-// join.js — timestamp del formulario y modales de membresía (solo join.html)
+// join.js — form timestamp and membership benefit modals (join.html only)
 
-// Llenar el campo oculto con la fecha/hora en que se cargó el formulario
+// Store the date and time the form was loaded by the user
 document.querySelector("#timestamp").value = new Date().toISOString();
 
-// Abrir el modal correspondiente al hacer clic en cada tarjeta
+// Open the matching modal when a card link is clicked
 document.querySelectorAll(".membership-card a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
     const modal = document.querySelector(`#${link.dataset.modal}`);
     modal.showModal();
   });
 });
 
-// Cerrar con el botón ✕
-document.querySelectorAll("dialog .close-modal").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.closest("dialog").close();
+// Close with the X button
+document.querySelectorAll("dialog .close-modal").forEach((button) => {
+  button.addEventListener("click", () => {
+    button.closest("dialog").close();
   });
 });
 
-// Cerrar al hacer clic fuera del contenido del modal
+// Close when clicking outside the modal content
 document.querySelectorAll("dialog").forEach((dialog) => {
-  dialog.addEventListener("click", (e) => {
-    if (e.target === dialog) {
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
       dialog.close();
     }
   });

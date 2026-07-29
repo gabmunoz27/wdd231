@@ -1,74 +1,74 @@
 [
   {
     "name": "Sweet & Coffee",
-    "address": "Av. 9 de Octubre 100 y Malecón, Guayaquil",
+    "address": "Av. 9 de Octubre 100 and Malecon, Guayaquil",
     "phone": "(04) 230-1234",
     "website": "https://www.sweetandcoffee.com.ec",
     "image": "images/members/sweetcoffee.webp",
     "membership": 3,
-    "description": "Cafetería ecuatoriana con café de origen y dulces artesanales."
+    "description": "Ecuadorian coffee shop serving single-origin coffee and artisan pastries."
   },
   {
-    "name": "La Parrilla del Ñato",
-    "address": "Av. Víctor Emilio Estrada 1219, Urdesa",
+    "name": "La Parrilla del Nato",
+    "address": "Av. Victor Emilio Estrada 1219, Urdesa",
     "phone": "(04) 238-6398",
     "website": "https://www.parrilladelnato.com",
     "image": "images/members/parrilla.webp",
     "membership": 2,
-    "description": "Restaurante de parrilladas tradicional de Guayaquil desde 1982."
+    "description": "Traditional Guayaquil steakhouse serving the city since 1982."
   },
   {
     "name": "TechGuayas Solutions",
-    "address": "Edificio The Point, Puerto Santa Ana, Piso 12",
+    "address": "The Point Building, Puerto Santa Ana, Floor 12",
     "phone": "(04) 371-0500",
     "website": "https://www.techguayas.ec",
     "image": "images/members/techguayas.webp",
     "membership": 3,
-    "description": "Desarrollo de software y transformación digital para empresas."
+    "description": "Software development and digital transformation for local businesses."
   },
   {
-    "name": "Almacenes La Bahía Central",
-    "address": "Calle Villamil 305 y Chile, Centro",
+    "name": "La Bahia Central Stores",
+    "address": "Villamil 305 and Chile, Downtown",
     "phone": "(04) 251-8877",
     "website": "https://www.labahiacentral.ec",
     "image": "images/members/bahia.webp",
     "membership": 2,
-    "description": "Comercio mayorista y minorista en el corazón comercial de la ciudad."
+    "description": "Wholesale and retail trade in the heart of the commercial district."
   },
   {
-    "name": "Ferretería El Constructor",
+    "name": "El Constructor Hardware",
     "address": "Av. Juan Tanca Marengo Km 2.5",
     "phone": "(04) 224-6690",
     "website": "https://www.elconstructor.ec",
     "image": "images/members/ferreteria.webp",
     "membership": 1,
-    "description": "Materiales de construcción y herramientas para profesionales."
+    "description": "Construction materials and professional tools supplier."
   },
   {
-    "name": "Clínica Alborada Norte",
-    "address": "Cdla. Alborada 3ra Etapa, Av. Rodolfo Baquerizo",
+    "name": "Alborada Norte Clinic",
+    "address": "Alborada 3rd Stage, Av. Rodolfo Baquerizo",
     "phone": "(04) 264-3000",
     "website": "https://www.clinicaalborada.ec",
     "image": "images/members/clinica.webp",
     "membership": 2,
-    "description": "Atención médica integral con especialidades y emergencias 24/7."
+    "description": "Comprehensive medical care with specialties and 24/7 emergency service."
   },
   {
-    "name": "Panadería San Francisco",
-    "address": "Cdla. Kennedy Norte, Av. Francisco de Orellana",
+    "name": "San Francisco Bakery",
+    "address": "Kennedy Norte, Av. Francisco de Orellana",
     "phone": "(04) 268-1122",
     "website": "https://www.pansanfrancisco.ec",
     "image": "images/members/panaderia.webp",
     "membership": 1,
-    "description": "Pan artesanal horneado a diario y repostería tradicional."
+    "description": "Artisan bread baked daily and traditional Ecuadorian pastries."
   },
   {
-    "name": "Astillero del Río Guayas",
-    "address": "Vía a la Costa Km 10.5",
+    "name": "Rio Guayas Shipyard",
+    "address": "Via a la Costa Km 10.5",
     "phone": "(04) 287-4455",
     "website": "https://www.astilleroguayas.ec",
     "image": "images/members/astillero.webp",
     "membership": 3,
-    "description": "Construcción y mantenimiento naval en la ría de Guayaquil."
+    "description": "Naval construction and maintenance on the Guayas River."
   }
 ]

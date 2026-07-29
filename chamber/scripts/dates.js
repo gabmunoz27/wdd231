@@ -1,4 +1,4 @@
-// dates.js — año de copyright y última modificación (todas las páginas)
+// dates.js — copyright year and last modified date (all pages)
 
 const yearSpan = document.querySelector("#currentyear");
 if (yearSpan) {

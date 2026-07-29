@@ -1,4 +1,4 @@
-// directory.js — listado de miembros con toggle grid/lista (solo directory.html)
+// directory.js — member listing with grid/list toggle (directory.html only)
 
 const directory = document.querySelector("#directory");
 const gridBtn = document.querySelector("#gridView");
@@ -14,13 +14,13 @@ async function getMembers() {
   try {
     const response = await fetch("data/members.json");
     if (!response.ok) {
-      throw new Error(`Error HTTP: ${response.status}`);
+      throw new Error(`HTTP error: ${response.status}`);
     }
     const members = await response.json();
     displayMembers(members);
   } catch (error) {
-    console.error("Error al cargar el directorio:", error);
-    directory.innerHTML = "<p>No se pudo cargar el directorio de miembros.</p>";
+    console.error("Error loading the directory:", error);
+    directory.innerHTML = "<p>The member directory could not be loaded.</p>";
   }
 }
 
@@ -31,18 +31,19 @@ function displayMembers(members) {
     const card = document.createElement("section");
     card.classList.add("member-card");
     card.innerHTML = `
-      <img src="${member.image}" alt="Logo de ${member.name}" loading="lazy" width="90" height="90">
+      <img src="${member.image}" alt="${member.name} logo" loading="lazy" width="90" height="90">
       <h3>${member.name}</h3>
       <p class="description">${member.description}</p>
       <p>${member.address}</p>
-      <p>📞 ${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener">Sitio web</a>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank" rel="noopener">Website</a>
+      <span class="membership">${levelNames[member.membership]}</span>
     `;
     directory.appendChild(card);
   });
 }
 
-// Toggle entre vista de cuadrícula y lista
+// Toggle between grid and list views
 gridBtn.addEventListener("click", () => {
   directory.classList.add("grid");
   directory.classList.remove("list");

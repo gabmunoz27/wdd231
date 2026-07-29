@@ -1,11 +1,11 @@
 /* =========================================
-   larger.css — Pantallas medianas y grandes
-   (la consigna exige que el layout del main
-   cambie entre móvil y vistas más amplias)
+   larger.css — Medium and large screens
+   The main layout changes between mobile
+   and wider views, as required.
    ========================================= */
 
 @media (min-width: 768px) {
-  /* Navegación horizontal, sin hamburguesa */
+  /* Horizontal navigation, no hamburger */
   #menu-btn {
     display: none;
   }
@@ -21,38 +21,36 @@
   }
 
   nav a {
-    border-bottom: none;
     padding: 0.25rem 0;
+    border-bottom: none;
   }
 
   main h1 {
     font-size: 2rem;
   }
 
-  /* Hero más alto y CTA más prominente */
+  /* Taller hero and larger call to action */
   .hero img {
     height: 60vh;
   }
 
   .cta-btn {
-    bottom: 30px;
     right: 40px;
+    bottom: 30px;
     padding: 12px 24px;
-    font-size: 1.05rem;
   }
 
-  /* El home pasa de 1 columna a grid de 3 */
-  .home-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .spotlights {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Directorio en cuadrícula de 3 columnas */
+  /* Home and spotlights go from 1 column to 3 */
+  .home-grid,
+  .spotlights,
   #directory.grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Form on the left, membership cards on the right */
+  .join-layout {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
   }
 
   #directory.list .member-card h3 {
@@ -60,18 +58,13 @@
     min-width: 220px;
   }
 
-  /* Footer en fila */
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
     gap: 1rem;
     padding: 1.5rem 2rem;
-  }
-
-  footer > p:last-child {
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -82,14 +75,5 @@
 
   #directory.grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* ============ JOIN — PANTALLAS GRANDES ============ */
-@media (min-width: 768px) {
-  /* Formulario a la izquierda, tarjetas a la derecha */
-  .join-layout {
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
   }
 }
