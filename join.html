@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Únete a la Cámara de Comercio de Guayaquil: solicita tu membresía NP, Bronze, Silver o Gold y haz crecer tu negocio.">
+  <meta name="author" content="Gabriel Muñoz Beltran">
+  <title>Cámara de Comercio de Guayaquil | Únete</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook / Open Graph Meta -->
+  <meta property="og:title" content="Únete | Cámara de Comercio de Guayaquil">
+  <meta property="og:description" content="Solicita tu membresía y accede a eventos, capacitación y publicidad para tu negocio.">
+  <meta property="og:image" content="https://gabmunoz27.github.io/wdd231/chamber/images/social-share.png">
+  <meta property="og:url" content="https://gabmunoz27.github.io/wdd231/chamber/join.html">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: normalize primero, luego small y larger -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Scripts: solo los que necesita esta página -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/flag.png" alt="Logo de la Cámara de Comercio de Guayaquil">
+      <span>Cámara de Comercio de Guayaquil</span>
+    </div>
+    <button id="menu-btn" aria-label="Abrir menú de navegación"></button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="directory.html">Directorio</a></li>
+        <li><a href="join.html" class="active">Únete</a></li>
+        <li><a href="discover.html">Descubre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Únete a la Cámara de Comercio</h1>
+
+    <div class="join-layout">
+      <!-- Formulario de solicitud -->
+      <form method="get" action="thankyou.html" class="join-form">
+        <fieldset>
+          <legend>Solicitud de Membresía</legend>
+
+          <label>Nombre *
+            <input type="text" name="firstname" title="Ingresa tu nombre" autocomplete="given-name" required>
+          </label>
+
+          <label>Apellido *
+            <input type="text" name="lastname" title="Ingresa tu apellido" autocomplete="family-name" required>
+          </label>
+
+          <label>Cargo en la organización
+            <input type="text" name="orgtitle" title="Tu cargo dentro de la organización (mínimo 7 caracteres, solo letras, guiones y espacios)" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\-\s]{7,}">
+          </label>
+
+          <label>Correo electrónico *
+            <input type="email" name="email" title="Ingresa tu correo electrónico" autocomplete="email" placeholder="ejemplo@correo.com" required>
+          </label>
+
+          <label>Teléfono móvil *
+            <input type="tel" name="phone" title="Ingresa tu número de teléfono móvil" autocomplete="tel" required>
+          </label>
+
+          <label>Nombre del negocio u organización *
+            <input type="text" name="organization" title="Ingresa el nombre de tu negocio u organización" autocomplete="organization" required>
+          </label>
+
+          <label>Nivel de membresía
+            <select name="membership" title="Selecciona un nivel de membresía">
+              <option value="np">NP — Organizaciones sin fines de lucro</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+            </select>
+          </label>
+
+          <label>Descripción del negocio
+            <textarea name="description" title="Describe brevemente tu negocio u organización" rows="4"></textarea>
+          </label>
+
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <input type="submit" value="Enviar Solicitud" class="submit-btn">
+        </fieldset>
+      </form>
+
+      <!-- Tarjetas de niveles de membresía -->
+      <section class="membership-cards">
+        <h2>Niveles de Membresía</h2>
+
+        <div class="membership-card np-card">
+          <h3>NP</h3>
+          <p>Sin costo</p>
+          <a href="#" data-modal="np-modal">Ver beneficios</a>
+        </div>
+
+        <div class="membership-card bronze-card">
+          <h3>Bronze</h3>
+          <p>$25/mes</p>
+          <a href="#" data-modal="bronze-modal">Ver beneficios</a>
+        </div>
+
+        <div class="membership-card silver-card">
+          <h3>Silver</h3>
+          <p>$50/mes</p>
+          <a href="#" data-modal="silver-modal">Ver beneficios</a>
+        </div>
+
+        <div class="membership-card gold-card">
+          <h3>Gold</h3>
+          <p>$100/mes</p>
+          <a href="#" data-modal="gold-modal">Ver beneficios</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modales de beneficios -->
+    <dialog id="np-modal">
+      <button class="close-modal" aria-label="Cerrar">✕</button>
+      <h3>Membresía NP</h3>
+      <p>Para organizaciones sin fines de lucro — sin costo.</p>
+      <ul>
+        <li>Listado en el directorio de miembros</li>
+        <li>Acceso a eventos comunitarios</li>
+        <li>Boletín mensual de la cámara</li>
+      </ul>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <button class="close-modal" aria-label="Cerrar">✕</button>
+      <h3>Membresía Bronze</h3>
+      <p>Ideal para emprendimientos que inician.</p>
+      <ul>
+        <li>Todo lo de NP</li>
+        <li>Descuento del 10% en eventos</li>
+        <li>1 capacitación empresarial al año</li>
+        <li>Perfil básico en el directorio</li>
+      </ul>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <button class="close-modal" aria-label="Cerrar">✕</button>
+      <h3>Membresía Silver</h3>
+      <p>Para negocios en crecimiento.</p>
+      <ul>
+        <li>Todo lo de Bronze</li>
+        <li>Descuento del 25% en eventos</li>
+        <li>4 capacitaciones al año</li>
+        <li>Aparición en los spotlights de la página de inicio</li>
+        <li>Networking empresarial trimestral</li>
+      </ul>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <button class="close-modal" aria-label="Cerrar">✕</button>
+      <h3>Membresía Gold</h3>
+      <p>Máxima visibilidad y beneficios.</p>
+      <ul>
+        <li>Todo lo de Silver</li>
+        <li>Entrada gratuita a todos los eventos</li>
+        <li>Capacitaciones ilimitadas</li>
+        <li>Posición prioritaria en spotlights y directorio</li>
+        <li>Publicidad destacada en el boletín</li>
+        <li>Asesoría empresarial personalizada</li>
+      </ul>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <h4>Cámara de Comercio de Guayaquil</h4>
+      <p>Av. Francisco de Orellana 236, Guayaquil, Ecuador</p>
+      <p>info@ccg.org.ec | (04) 259-6100</p>
+    </div>
+    <div class="social">
+      <a href="https://www.youtube.com"><img src="images/youtube_logo.svg" alt="YouTube"></a>
+      <a href="https://x.com"><img src="images/twitter_logo.svg" alt="X (Twitter)"></a>
+      <a href="https://www.linkedin.com"><img src="images/linkedin_logo.svg" alt="LinkedIn"></a>
+    </div>
+    <p>
+      Gabriel Muñoz Beltran | WDD 231<br>
+      © <span id="currentyear"></span> Cámara de Comercio de Guayaquil<br>
+      Última modificación: <span id="lastModified"></span>
+    </p>
+  </footer>
+</body>
+</html>
