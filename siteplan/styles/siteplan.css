@@ -1,0 +1,186 @@
+/* =========================================
+   siteplan.css — Devfolio site plan document
+   Color scheme and typography declared in
+   the plan are applied to this document.
+   ========================================= */
+
+:root {
+  --deep-navy: #1b2a41;
+  --signal-teal: #0e7c6b;
+  --bright-teal: #38e1c6;
+  --paper: #f7f9fb;
+  --card: #ffffff;
+  --body-text: #2a3b55;
+  --border: #d7dee6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  background-color: var(--paper);
+  color: var(--body-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--deep-navy);
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.25;
+}
+
+header {
+  margin-bottom: 2rem;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--deep-navy);
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--paper);
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  color: var(--bright-teal);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--signal-teal);
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+a {
+  color: var(--signal-teal);
+  font-weight: 600;
+}
+
+dt {
+  margin-top: 1rem;
+  color: var(--deep-navy);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0.25rem 0 0;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--bright-teal);
+  background-color: var(--paper);
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+caption {
+  margin-bottom: 0.5rem;
+  color: var(--deep-navy);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: var(--deep-navy);
+  color: var(--paper);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.swatch-navy { background-color: var(--deep-navy); }
+.swatch-teal { background-color: var(--signal-teal); }
+.swatch-bright { background-color: var(--bright-teal); }
+.swatch-paper { background-color: var(--paper); }
+
+.sample-heading {
+  margin-bottom: 0.25rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sample-body {
+  margin-top: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.wireframes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.wireframes img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  color: var(--deep-navy);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+}
+
+footer {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border);
+  text-align: center;
+}
+
+@media (min-width: 40rem) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .wireframes {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

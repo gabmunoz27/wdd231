@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site plan for Devfolio by Gabriel Munoz, a software project portfolio website built for WDD 231.">
+  <meta name="author" content="Gabriel Munoz Beltran">
+  <title>Site Plan | Devfolio Software Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Devfolio</h1>
+    <p>Individual Project Site Plan &mdash; WDD 231</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Devfolio</strong></p>
+      <p>The name joins <em>developer</em> and <em>portfolio</em> into a single word that states exactly what the site is. It is short, easy to spell after hearing it once, and it reads the same in English and Spanish, which matters for a developer based in Ecuador who applies to work with teams abroad. The name also scales: as the catalog of projects grows, the brand still fits.</p>
+      <p>Optional domain availability: <code>devfolio.dev</code></p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>Devfolio is a personal software portfolio that gives recruiters, hiring managers, and potential clients a fast, honest picture of what I have built and how I work.</p>
+      <p>The work is organized into three practice areas, which are introduced on the home page and used to filter the project catalog:</p>
+      <ul>
+        <li><strong>Software development</strong> &mdash; web and desktop applications built with contemporary tooling.</li>
+        <li><strong>Game development</strong> &mdash; interactive projects, prototypes, and game mechanics.</li>
+        <li><strong>Automation services</strong> &mdash; scripts, integrations, and process automation that remove manual work for a business.</li>
+      </ul>
+      <p>The site provides:</p>
+      <ul>
+        <li>A filterable catalog of projects, each described by its practice area, technology stack, year, and my role on it.</li>
+        <li>Detailed project information in a modal dialog so a visitor can inspect one project without losing their place in the catalog.</li>
+        <li>A services and background section covering how I work and what I can be hired to do.</li>
+        <li>A contact form that lets a visitor describe a project idea or a job opportunity and send it for follow up.</li>
+      </ul>
+      <p>Project data is stored in a local JSON file so the catalog can grow without rewriting markup. It will hold at least fifteen entries across the three areas, including client work, course projects, and small utilities, so a visitor can judge both range and depth.</p>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <p>These are questions a visitor from the target audience would arrive with. The content of the site is built to answer them.</p>
+      <ul>
+        <li>Does this developer work in the area I need, software, games, or automation?</li>
+        <li>Has this developer built anything with the technology stack my team already uses?</li>
+        <li>What did this person actually do on each project, and was it individual or team work?</li>
+        <li>How do I get in touch to discuss a job opening or a freelance project?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Scheme</h2>
+      <p>The palette is built around a dark navy that carries the structural elements and a teal that signals interaction. Every color below is applied to this document, and each combination was checked against the WebAIM Contrast Checker at the AA level.</p>
+
+      <table>
+        <caption>Color roles and where each color is applied</caption>
+        <thead>
+          <tr>
+            <th scope="col">Swatch</th>
+            <th scope="col">Color</th>
+            <th scope="col">Where it is used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch swatch-navy"></span></td>
+            <td>Deep Navy <code>#1B2A41</code></td>
+            <td>Header and footer backgrounds, all headings, table headers, and navigation bar on the project site.</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-teal"></span></td>
+            <td>Signal Teal <code>#0E7C6B</code></td>
+            <td>Text links, section accent borders, form focus outlines, and active filter buttons.</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-bright"></span></td>
+            <td>Bright Teal <code>#38E1C6</code></td>
+            <td>Accents on dark backgrounds only, such as the header subtitle and quote borders, where the light value carries enough contrast.</td>
+          </tr>
+          <tr>
+            <td><span class="swatch swatch-paper"></span></td>
+            <td>Paper <code>#F7F9FB</code></td>
+            <td>Page background and text placed on dark navy surfaces. Project cards sit on white to lift them off this background.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Body copy uses <code>#2A3B55</code>, a softer navy that keeps long paragraphs comfortable to read while holding a contrast ratio above 10:1 on the page background.</p>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p>Two typefaces are used, both applied to this document.</p>
+
+      <dl>
+        <dt>Space Grotesk</dt>
+        <dd>Applied to all headings, table headers, figure captions, and short labels. Its slightly technical, geometric letterforms suit a software portfolio and give headings a distinct voice against the body copy.</dd>
+
+        <dt>Inter</dt>
+        <dd>Applied to body paragraphs, lists, table cells, and form fields. Inter was designed for screen reading at small sizes, which keeps project descriptions and form labels legible on a 320px viewport.</dd>
+      </dl>
+
+      <p class="sample-heading">Space Grotesk sets the headings</p>
+      <p class="sample-body">Inter carries the body copy, list items, and every longer passage of text across the site.</p>
+    </section>
+
+    <section>
+      <h2>Wireframe</h2>
+      <p>Layout sketches of the home page for a small viewport and for a wider viewport. Both views carry the same four blocks in the same order, so the structure stays recognizable as the screen grows: a hero with the headline and primary call to action, a "What I do" band holding the three practice areas, a projects gallery, and the footer.</p>
+      <p>The layout changes in how those blocks are arranged. On mobile everything stacks into a single column, the hero image drops below the text, and the navigation collapses behind a menu icon. On wider screens the navigation opens into a horizontal row with a "View Projects" button, the hero splits into text on the left and image on the right, and both the practice area cards and the project cards move into three column rows.</p>
+
+      <div class="wireframes">
+        <figure>
+          <img src="images/wireframe-mobile.jpg" alt="Wireframe of the Devfolio home page in a mobile viewport. A single column stacks a logo and menu icon, a headline with supporting text and an Explore my work button, a hero image, a What I do band with three stacked cards for software development, game development and automation services, a Projects section with three stacked project cards each showing an image, title and short description, and a footer with social icons above the navigation links.">
+          <figcaption>Mobile view, 320px to 767px</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/wireframe-desktop.jpg" alt="Wireframe of the Devfolio home page in a desktop viewport. A horizontal navigation bar holds the logo, four links and a View Projects button. The hero places the headline, supporting text and Explore my work button on the left with an image on the right. A What I do band centers its heading above three side by side cards for software development, game development and automation services. A Projects section shows three project cards in a row, each with an image, title and short description. The footer places navigation links on the left and social icons on the right.">
+          <figcaption>Tablet and desktop view, 768px and wider</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Gabriel Munoz Beltran | WDD 231 | Individual Project Site Plan</p>
+  </footer>
+</body>
+</html>
