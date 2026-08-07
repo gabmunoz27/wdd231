@@ -1,0 +1,285 @@
+/* =========================================
+   small.css — Base styles (mobile first)
+   Palette: navy #003366 | yellow #f1c40f
+   ========================================= */
+
+:root {
+  --primary: #003366;
+  --primary-light: #00509e;
+  --accent: #f1c40f;
+  --accent-hover: #ffdc4a;
+  --bg: #f4f4f9;
+  --card-bg: #ffffff;
+  --text: #333333;
+  --border: #dddddd;
+  --done: #0b5f3a;
+  --done-bg: #e6f4ec;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary);
+}
+
+/* ============ HEADER & NAVIGATION ============ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.brand span {
+  color: var(--card-bg);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+#menu-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background: none;
+  color: var(--card-bg);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+#menu-btn::before {
+  content: "\2630";
+}
+
+#menu-btn.open::before {
+  content: "\2715";
+}
+
+nav {
+  flex-basis: 100%;
+}
+
+#nav-list {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+}
+
+#nav-list.open {
+  display: flex;
+}
+
+#nav-list a {
+  display: block;
+  padding: 0.65rem 0.25rem;
+  border-bottom: 1px solid var(--primary-light);
+  color: var(--card-bg);
+  font-weight: 600;
+  text-decoration: none;
+  /* Border reserved on both states so hover does not shift the layout */
+  border-left: 4px solid transparent;
+  padding-left: 0.5rem;
+}
+
+#nav-list a:hover {
+  background-color: var(--primary-light);
+  border-left-color: var(--accent);
+}
+
+/* Wayfinding: current page */
+#nav-list a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* ============ MAIN LAYOUT ============ */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+section h2 {
+  margin: 0;
+  padding: 0.7rem 1rem;
+  background-color: var(--primary);
+  color: var(--card-bg);
+  font-size: 1.15rem;
+}
+
+.section-body {
+  padding: 1rem;
+}
+
+/* ============ CERTIFICATE / COURSES ============ */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--primary);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.filter-btn:hover {
+  background: var(--primary);
+  color: var(--card-bg);
+}
+
+.filter-btn[aria-pressed="true"] {
+  background: var(--primary);
+  color: var(--card-bg);
+}
+
+#course-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.course-card {
+  padding: 0.85rem;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.course-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.course-card p {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+}
+
+.course-title {
+  font-weight: 600;
+}
+
+.course-status {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* Completed courses are visually distinct */
+.course-card.completed {
+  background: var(--done-bg);
+  border-left-color: var(--done);
+}
+
+.course-card.completed .course-status {
+  color: var(--done);
+}
+
+.course-card.completed .course-status::before {
+  content: "\2713 ";
+}
+
+.credits {
+  margin: 1rem 0 0;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ============ CONTENT SECTIONS ============ */
+.section-body img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+}
+
+.section-body p {
+  margin-top: 0;
+}
+
+.section-body ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--card-bg);
+  text-align: center;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.social img {
+  width: 32px;
+  height: 32px;
+}
+
+.social a:hover img {
+  opacity: 0.75;
+}

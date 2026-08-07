@@ -1,0 +1,74 @@
+/* =========================================
+   larger.css — Medium and large screens
+   Contains the required media query
+   ========================================= */
+
+@media (min-width: 40rem) {
+  /* Horizontal flex navigation, no hamburger */
+  #menu-btn {
+    display: none;
+  }
+
+  nav {
+    flex-basis: auto;
+  }
+
+  #nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  #nav-list a {
+    padding: 0.4rem 0.9rem;
+    border-bottom: none;
+    border-left: none;
+    border-top: 4px solid transparent;
+  }
+
+  #nav-list a:hover {
+    border-left-color: transparent;
+    border-top-color: var(--accent);
+  }
+
+  #nav-list a.active {
+    border-left-color: transparent;
+    border-top-color: var(--accent);
+  }
+
+  main h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Two column layout: certificate spans the full first row */
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certificate {
+    grid-column: 1 / -1;
+  }
+
+  #course-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+
+  .social {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  #course-cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
