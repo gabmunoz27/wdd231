@@ -9,20 +9,16 @@
     display: none;
   }
 
-  nav {
-    flex-basis: auto;
-  }
-
   #nav-list {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
   }
 
   #nav-list a {
-    padding: 0.4rem 0.9rem;
+    padding: 0.7rem 1.5rem;
     border-bottom: none;
     border-left: none;
+    /* Border reserved so hover does not shift the row */
     border-top: 4px solid transparent;
   }
 
@@ -40,9 +36,9 @@
     font-size: 2.25rem;
   }
 
-  /* Two column layout: certificate spans the full first row */
+  /* About Me beside the photo, courses full width below */
   .layout {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 
   .certificate {
@@ -54,16 +50,7 @@
   }
 
   footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
     padding: 1.5rem 2rem;
-    text-align: left;
-  }
-
-  .social {
-    margin-bottom: 0;
   }
 }
 
